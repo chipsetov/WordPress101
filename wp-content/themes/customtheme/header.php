@@ -16,22 +16,13 @@
 	?>
 	
 <body <?php body_class($custom_classes); ?>>
-
 	<?php
-
-	if( $menu_items = wp_get_nav_menu_items( 5 ) ) { 
-	$menu_list = '';
-	foreach ( (array) $menu_items as $key => $menu_item ) {
-		$title = $menu_item->title;
-		$url = $menu_item->url;
-		$menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
-	}
-	echo $menu_list;
-}
+$items = wp_get_nav_menu_items( 5 );?>
+<pre>
+	<?php
+print_r( $items );
 ?>
-
-
-
+</pre>
 	<div class="container">
 
 		<div class="row">
@@ -56,7 +47,7 @@
             wp_nav_menu( array(
                 'menu'              => 'primary',
                 'theme_location'    => 'primary',
-                'depth'             => 2,
+                'depth'             => 3,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
                 'container_id'      => 'bs-example-navbar-collapse-1',
