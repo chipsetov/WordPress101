@@ -21,6 +21,7 @@ $items = wp_get_nav_menu_items( 5 );?>
 <pre>
 	<?php
 print_r( $items );
+
 ?>
 </pre>
 	<div class="container">
