@@ -22,8 +22,14 @@ $items = wp_get_nav_menu_items( 5 );?>
 	<?php
 print_r( $items );
 
+
 ?>
 </pre>
+<?php
+clean_custom_menu("primary");
+?>
+
+
 	<div class="container">
 
 		<div class="row">
