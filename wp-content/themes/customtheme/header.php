@@ -16,24 +16,6 @@
 	?>
 	
 <body <?php body_class($custom_classes); ?>>
-	<?php
-/*$items = wp_get_nav_menu_items( 5 );?>
-<pre>
-	<?php
-print_r( $items );
-*/
-
-?>
-</pre>
-<?php
-clean_custom_menu("primary");
-
-
-
-
-
-?>
-
 
 
 
@@ -42,45 +24,6 @@ clean_custom_menu("primary");
 
 
 	<div class="container">
-<?php
-        $theme_location = "primary";
-        if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
-        $menu = get_term( $locations[$theme_location], 'nav_menu' );
-        $menu_items = wp_get_nav_menu_items($menu->term_id);
- 
-        $menu_list  = '<nav>' ."\n";
-        $menu_list .= '<ul class="main-nav">' ."\n";
- 
-        $count = 0;
-        $submenu = false;
-
-        $menu_tree = array();
-
-        foreach ($menu_items as $item):
-            $param = $item->menu_item_parent;
-            echo $item->menu_item_parent . "<br>";
-            $menu_tree[$param][] = $item;
-        endforeach;
-
-        foreach ($menu_tree[0] as $item) {
-            echo $item->ID . "<br>";
-        }
-
-        
-
-
-        ?>
-        <pre>
-    <?php
-        print_r($menu_tree);
-        ?>
-    </pre>
-    <?php
-
-}
-    
-
-    ?>
 
 		<div class="row">
 
@@ -116,7 +59,7 @@ clean_custom_menu("primary");
     </div>
 </nav>
 
-				<?php  wp_nav_menu(array('theme_location'=>'primary')); ?>
+				<?php  //wp_nav_menu(array('theme_location'=>'primary')); ?>
 
 			</div>
 		</div>
