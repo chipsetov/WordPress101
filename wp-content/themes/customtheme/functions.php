@@ -100,6 +100,16 @@ function clean_custom_menu( $theme_location ) {
  
         $count = 0;
         $submenu = false;
+
+        $menu_tree = array();
+
+        foreach($menu_items as $item):
+            $param = $item->menu_item_parent;
+            $menu_tree[$param][] = $item;
+        endforeach;
+        
+        
+
          
         foreach( $menu_items as $menu_item ) {
              

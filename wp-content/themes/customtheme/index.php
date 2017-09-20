@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+
+
 <div calss="row">
 
 	<div class="col-xs-12 col-sm-8">
