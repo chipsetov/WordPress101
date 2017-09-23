@@ -19,7 +19,12 @@
 		</div>
 
 
-	<?php 
+	<?php
+
+	$currentPaged = (get_query_var('paged')) ? (get_query_var('paged')) : 1;
+	$args = array('posts_per_page' => 3, 'paged' => $currentPaged);
+	query_posts($args);
+
 	if(have_posts() ): $i = 0;
 		while ( have_posts()): the_post(); ?>
 
@@ -50,9 +55,17 @@
 				</div>
 
 
-	<?php $i++;	endwhile;
+	<?php $i++;	endwhile;?>
 
-	endif;
+	<div class="col-xs-6 text-left">
+	<?php next_posts_link('<< Older Posts'); ?>
+	</div>
+	<div class="col-xs-6 text-right">
+	<?php previous_posts_link('Newer posts >>'); ?>
+	</div>
+
+	<?php endif;
+		wp_reset_query();
 
 
 	?>
