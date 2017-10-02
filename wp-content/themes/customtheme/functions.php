@@ -159,3 +159,14 @@ function clean_custom_menu( $theme_location ) {
     }
     echo $menu_list;
 }
+
+
+    /*
+        ==================
+        Include walker file
+        ==================
+
+    */
+
+require get_template_directory() . '/inc/walker.php'; 
+
