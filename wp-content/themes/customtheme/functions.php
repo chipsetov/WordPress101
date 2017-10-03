@@ -170,3 +170,17 @@ function clean_custom_menu( $theme_location ) {
 
 require get_template_directory() . '/inc/walker.php'; 
 
+    /*
+        ==================
+        Head function
+        ==================
+
+    */
+
+function custom_remove_version() {
+
+    return '';
+
+}
+
+add_filter('the_generator', 'custom_remove_version');
