@@ -1,0 +1,66 @@
+.info{height:70px !important;}
+.info td{padding: 20px !important; background-color: #3071a9 !important; color: #fff !important;}
+.success td{padding: 20px !important; background-color: #e3f5db !important; color: #000 !important;}
+.btn-sm, .btn-group-sm > .btn{width:200px !important; height: 50px;}
+thead{background: #114877; color: #fff; font-weight: bold;}
+thead td{padding: 15px !important;}
+
+.modal-content{
+    margin: 0 auto;
+    border-radius: 100%;
+    outline: 0;
+    width: 500px;
+    height: 500px;
+}
+.modal-header {
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 45px;
+    border: 0;
+}
+.dtpicker-header .dtpicker-close{font-size: 2.5em !important; font-weight: bold !important;}
+.modal-body {
+    position: relative;
+    padding: 5px 40px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -18px;
+    border: 0;
+    text-align: center;
+}
+.page-header h2{text-transform: uppercase;}
+.modal-body code{background: none;}
+.modal-footer {
+    padding: 15px;
+    text-align: center;
+    border: 0;
+}
+.modal-footer button{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+}
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    color: #428bca;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+.modal-title-min{
+    font-size:17px;
+    font-weight:bold;
+    color: #428bca;
+}
+.linkshort{
+    background-color: #f5f2f2;
+    padding: 10px;
+    margin-top: 10px;
+}
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 600px;
+        margin: 100px auto;
+    }
+}
