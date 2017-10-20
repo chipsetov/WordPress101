@@ -20,8 +20,9 @@
 				
 					<?php endif; ?>
 					
-					<small><?php 
-					$terms_list = wp_get_post_terms($post->ID, 'field');
+					<small><?php
+					echo custom_get_terms( $post->ID, 'field' );
+					/*$terms_list = wp_get_post_terms($post->ID, 'field');
 
 					$i = 0;
 					foreach ($terms_list as $term) { $i++;
@@ -29,10 +30,11 @@
 					 	echo $term->name.' ';
 					 } 
 
+*/
 
-
-					?> || <?php 
-					$terms_list = wp_get_post_terms($post->ID, 'software');
+					?> || <?php
+					echo custom_get_terms( $post->ID, 'software' ); 
+					/*$terms_list = wp_get_post_terms($post->ID, 'software');
 
 					$i = 0;
 					foreach ($terms_list as $term) { $i++;
@@ -40,12 +42,15 @@
 					 	echo $term->name.' ';
 					 } 
 
-
+*/
 
 					?> ||
 
 
-					<?php the_tags(); ?> || <?php edit_post_link(); ?></small>
+					<?php the_tags(); ?>
+					<?php 
+					if ( current_user_can('manage_options') ){
+						echo '||'; edit_post_link();} ?></small>
 					
 					<?php the_content(); ?>
 					
